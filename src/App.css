@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;400;700&display=swap');
+
+body {
+  margin: 0;
+
+  font-family: 'JetBrains Mono', monospace;
+  color: #191919;
+
+  background-color: #a2d2ff;
+}
+
+input {
+  padding: 0;
+  margin: 0;
+
+  border: 0;
+  outline: none;
+}
+
+button {
+  padding: 0;
+  
+  font: inherit;
+  color: inherit;
+
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+button:active, button:focus {
+  outline: none;
+}
+button::-moz-focus-inner {
+  border: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+label, button {
+  font-weight: 400;
+}
+
+h1 {
+  margin: 0;
+
+  font-size: 2.6vw;
+  text-transform: uppercase;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10.41vw;
+}
+
+.clock-form {
+  display: flex;
+  justify-content: space-around;
+  width: 41.6vw;
+  margin-top: 1.56vw;
+}
+
+.field {
+  width: 13.02vw;
+  height: 2.08vw;
+  padding: 0.52vw;
+
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.04vw;
+  font-weight: 100;
+  color: #191919;
+
+  border: 0.26vw solid #cdb4db;
+}
+
+.adding-btn {
+  width: 7.81vw;
+  height: 3.6vw;
+
+  font-size: 1.3vw;
+
+  background-color: #ffc8dd;
+  border: 0.26vw solid #cdb4db;
+}
+
+.adding-btn:hover {
+  box-shadow: 0 0 0 2px #bde0fe, 0 0 0 4px #cdb4db;
+}
+
+.clock-gallery {
+  display: flex;
+  width: 1000px;
+  margin-top: 70px;
+}
+
+.clocks-list {
+  display: flex;
+  width: inherit;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.clock-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 10px 10px 0;
+}
+
+.title-area {
+  display: flex;
+}
+
+.clock-title {
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.close-btn {
+  margin-left: 20px;
+
+  font-size: 20px;
+}
+
+.clock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 100px;
+  margin-top: 10px;
+
+  color: #fff;
+  font-size: 35px;
+  font-weight: 700;
+
+  border-radius: 10px;
+  background-color: #ffafcc;
+  border: 0.26vw solid #bde0fe;
+}
