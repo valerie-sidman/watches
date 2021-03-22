@@ -6,17 +6,19 @@ export default class Watches extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = { clocks: [] };
+    this.state = { clocks: [], titleValue: '', zoneValue: '' };
+  }
+
+  handleChange(event, fieldName) {
+    this.setState(prev => ({ ...prev, [fieldName]: event.target.value }));
   }
 
   addClock = (event) => {
     event.preventDefault();
-    const nameFieldValue = event.target.parentElement.querySelector('.name-field').value;
-    const zoneFieldValue = event.target.parentElement.querySelector('.zone-field').value;
     const clocks = this.state.clocks;
     clocks.push({
-      title: nameFieldValue,
-      zone: zoneFieldValue,
+      title: this.state.titleValue,
+      zone: this.state.zoneValue,
       id: nanoid()
     });
     this.setState({
@@ -37,11 +39,11 @@ export default class Watches extends React.Component {
         <form className="clock-form">
           <div className="name-box">
             <label className="title-field" htmlFor="name"></label>
-            <input className="name-field field" id="name" />
+            <input className="name-field field" id="name" value={this.state.titleValue} onChange={(event) => this.handleChange(event, 'titleValue')}/>
           </div>
           <div className="zone-box">
             <label className="title-field" htmlFor="zone"></label>
-            <input className="zone-field field" id="zone" />
+            <input className="zone-field field" id="zone" value={this.state.zoneValue} onChange={(event) => this.handleChange(event, 'zoneValue')}/>
           </div>
           <button className="adding-btn" type="submit" onClick={this.addClock}>Add</button>
         </form>
